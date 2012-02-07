@@ -1,0 +1,20 @@
+new-expression:
+      ::opt new new-placementopt new-type-id new-initializeropt
+      ::opt new new-placementopt ( type-id ) new-initializeropt
+new-placement:
+      ( expression-list )
+new-type-id:
+      type-specifier-seq new-declaratoropt
+new-declarator:
+      ptr-operator new-declaratoropt
+      noptr-new-declarator
+noptr-new-declarator:
+      [ expression ] attribute-specifier-seqopt
+      noptr-new-declarator [ constant-expression ] attribute-specifier-seqopt
+new-initializer:
+      ( expression-listopt )
+      braced-init-list
+
+
+
+Lambda-Expressions have non-virtual "operator ()"s
